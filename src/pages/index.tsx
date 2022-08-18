@@ -35,6 +35,7 @@ const Index = () => (
 
 export const getStaticProps: GetStaticProps = async () => {
   const ladingPage = await client.request(GET_LADING_PAGE)
+
   console.log('🚀 ', ladingPage.landingPage.data.attributes.logo)
 
   return {
