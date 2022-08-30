@@ -10,35 +10,41 @@ import Container from 'components/Container'
 const onClick = () =>
   gaEvent({ action: 'click', category: 'cta', label: 'hero button' })
 
-const SectionHero = () => (
-  <S.Wrapper>
-    <Container>
-      <Logo />
+const SectionHero = (props) => {
+  console.log(
+    '🚀 ~ file: index.tsx ~ line 14 ~ SectionHero ~ ladingPage',
+    props
+  )
+  return (
+    <S.Wrapper>
+      <Container>
+        <Logo />
 
-      <S.Content>
-        <S.TextBlock>
-          <S.Title>React Avançado</S.Title>
-          <S.Description>
-            Crie aplicações reais com NextJS, Strapi, GraphQL e mais!
-          </S.Description>
-          <S.ButtonWrapper>
-            <Button
-              href="https://www.udemy.com/course/react-avancado/?couponCode=PROMOAGO22"
-              onClick={onClick}
-              wide
-            >
-              Comprar
-            </Button>
-          </S.ButtonWrapper>
-        </S.TextBlock>
+        <S.Content>
+          <S.TextBlock>
+            <S.Title>React Avançado</S.Title>
+            <S.Description>
+              Crie aplicações reais com NextJS, Strapi, GraphQL e mais!
+            </S.Description>
+            <S.ButtonWrapper>
+              <Button
+                href="https://www.udemy.com/course/react-avancado/?couponCode=PROMOAGO22"
+                onClick={onClick}
+                wide
+              >
+                Comprar
+              </Button>
+            </S.ButtonWrapper>
+          </S.TextBlock>
 
-        <S.Image
-          src="/img/hero-illustration.svg"
-          alt="Ilustração de um desenvolvedor em frente a um computador com várias linhas de código."
-        />
-      </S.Content>
-    </Container>
-  </S.Wrapper>
-)
+          <S.Image
+            src="/img/hero-illustration.svg"
+            alt="Ilustração de um desenvolvedor em frente a um computador com várias linhas de código."
+          />
+        </S.Content>
+      </Container>
+    </S.Wrapper>
+  )
+}
 
 export default SectionHero
